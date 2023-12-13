@@ -1,1 +1,5 @@
-// Reexport your entry components here
+import TypeTester from "./components/TypeTester.svelte";
+
+export {
+  TypeTester
+}
