@@ -1,0 +1,13 @@
+$fonts: (
+  "BildVariableV5",
+  "FormaDJRMonoVariable",
+  "GimletSansVariable",
+  "RoslindaleVariable",
+);
+
+ @each $font in $fonts {
+   @font-face {
+     font-family: '#{$font}';
+     src: url('/fonts/#{$font}.ttf') format('truetype');
+   }
+ }

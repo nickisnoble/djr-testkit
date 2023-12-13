@@ -1,5 +1,5 @@
 import TypeTester from "./components/TypeTester.svelte";
 
-export {
+export default {
   TypeTester
 }

@@ -1,47 +1,43 @@
-type FontConfig = {
-  name: string,
-  filepath: string,
+export type FontConfig = {
+  name: string, // must match @font-face declaration
   fontSize?: RangeSetting,
   leading?: RangeSetting,
   previewText?: string,
-  axes: VariableAxis[]
-  stylisticSets: StylisticSet[]
-  presets: Preset[]
+  axes?: VariableAxis[]
+  stylisticSets?: StylisticSet[]
+  presets?: Preset[]
 }
 
-type Waypoint = {
-  label: string,
-  value: number
-} | number
-
-type RangeSetting = {
+export type RangeSetting = {
   min?: number,
   max?: number,
   default?: number,
   waypoints?: Waypoint[]
 }
 
-type ToggleSetting = boolean;
+export type ToggleSetting = boolean;
 
 type VariableAxis = {
-  label?: string,
-  key: string,
+  name?: string,
+  tag: string,
   type: "toggle" | "range",
   value: RangeSetting | ToggleSetting,
 }
 
 type StylisticSet = {
-  label?: string,
-  key: string,
+  name?: string,
+  tag: string,
   active: ToggleSetting,
   characters: string
 }
 
 type Preset = {
-  label: string,
+  name: string,
   description?: string,
   settings: Array<{
     axis: keyof VariableAxis,
     value: number
   }>
 }
+
+type Waypoint = [string, number] | number
