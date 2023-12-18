@@ -7,6 +7,10 @@ This will provide three magical things at once:
 3. A plain JS (via webcomponents) version of the typetester that can be embedded anywhere.
 
 
+Currently it's in early stages – it's not pretty.
+
+More examples, options, and more coming soon.
+
 ## Config files
 
 The type tester uses a config file to specific the typeface and the available settings. **It assumes that the font files are already loaded and available via CSS.**
@@ -19,7 +23,7 @@ You can find the spec for that [here](./src/lib/types.d.ts).
 
 1. `$ npm i` install dependencies
 2. `$ npm run build:static` Build the static version
-3. Copy `dist/type-tester.umd.js` to whereever JS lives in your project.
+3. Copy `dist/type-tester.umd.js` to wherever JS lives in your project.
 
 Then:
 
