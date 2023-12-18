@@ -1,27 +1,30 @@
 export type FontConfig = {
   name: string, // must match @font-face declaration
-  fontSize?: RangeSetting,
-  leading?: RangeSetting,
+  fontSize?: ClampedRangeSetting,
+  leading?: ClampedRangeSetting,
   previewText?: string,
   axes?: VariableAxis[]
   stylisticSets?: StylisticSet[]
   presets?: Preset[]
 }
 
-export type RangeSetting = {
+export type ToggleSetting = boolean;
+
+export type ClampedRangeSetting = {
   min?: number,
   max?: number,
-  default?: number,
+  default: number,
+  step?: number,
   waypoints?: Waypoint[]
 }
 
-export type ToggleSetting = boolean;
+type Waypoint = [string, number] | number
 
 type VariableAxis = {
   name?: string,
   tag: string,
   type: "toggle" | "range",
-  value: RangeSetting | ToggleSetting,
+  value: ClampedRangeSetting | ToggleSetting,
 }
 
 type StylisticSet = {
@@ -39,5 +42,3 @@ type Preset = {
     value: number
   }>
 }
-
-type Waypoint = [string, number] | number

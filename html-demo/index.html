@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plain HTML Demo</title>
+
+  <script src="../dist/type-tester.umd.js"></script>
+</head>
+<body>
+
+  <h1>Here's the <code>type-tester</code> running as a webcomponent in a normal-ass web page:</h1>
+
+  <div>
+    <type-tester
+      config='{
+        name: "RoslindaleVariable",
+        axes: [
+          {
+            name: "Optical Size",
+            tag: "opsz",
+            type: "range",
+            value: {
+              waypoints: [
+                ["Display",     48],
+                ["Deck",        16],
+                ["Text",        10]
+              ]
+            }
+          },
+          {
+            name: "Width",
+            tag: "wdth",
+            type: "range",
+            value: {
+              waypoints: [
+                ["Condensed",   75],
+                ["Narrow",      88],
+                ["Normal",      100]
+              ]
+            }
+          },
+          {
+            name: "Weight",
+            tag: "wght",
+            type: "range",
+            value: {
+              waypoints: [
+                ["Extra Light", 200],
+                ["Light",       300],
+                ["Regular",     400],
+                ["Medium",      500],
+                ["Semi Bold",   600],
+                ["Bold",        700],
+                ["Black",       800],
+                ["Ultra",       900]
+              ]
+            }
+          },
+          {
+            name: "Slant",
+            tag: "slnt",
+            type: "range",
+            value: {
+              waypoints: [
+                ["Roman",       0],
+                ["Italic",      -8]
+              ]
+            }
+          }
+        ],
+        // stylisticSets: [],
+        // presets: []
+      }'
+    ></type-tester>
+  </div>
+
+</body>
+</html>
